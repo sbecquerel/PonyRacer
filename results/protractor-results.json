@@ -1,0 +1,11 @@
+[
+  {
+    "description": "ponyracer App should display message saying app works",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 1169
+  }
+]

@@ -1,0 +1,10 @@
+<ngb-alert *ngIf="betFailed" type="danger" (close)="betFailed = false">
+  The race is already started or finished
+</ngb-alert>
+<h2>{{ raceModel.name }}</h2>
+<p>{{ raceModel.startInstant | fromNow }}</p>
+<div *ngFor="let pony of raceModel.ponies" class="col-12 col-md-2" [class.selected]="isPonySelected(pony)">
+  <pr-pony (ponyClicked)="betOnPony(pony)" [ponyModel]="pony"></pr-pony>
+</div>
+<a class="btn btn-primary" routerLink="/races/{{raceModel.id}}/live">Watch live!</a>
+

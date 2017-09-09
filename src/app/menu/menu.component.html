@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light navbar-toggleable-md fixed-top bg-faded">
+  <button (click)="toggleNavbar()" type="button" class="navbar-toggler navbar-toggler-right">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a routerLink="/" class="navbar-brand">PonyRacer</a>
+  <div id="navbar" class="navbar-collapse" [class.collapse]="navbarCollapsed">
+    <div *ngIf="user" class="nav navbar-nav mr-auto">
+      <a routerLink="/races" class="nav-item nav-link">Races</a>
+    </div>
+    <span *ngIf="user" class="nav-item navbar-text mr-2">
+      {{ user.login }}
+      <span class="fa fa-star"></span>
+      {{ user.money }}      
+    </span>
+    <a *ngIf="user" class="nav-item nav-link" (click)="logout($event)"><span class="fa fa-power-off"></span></a>
+  </div>  
+</nav>

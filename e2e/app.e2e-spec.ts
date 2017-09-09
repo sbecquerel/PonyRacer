@@ -1,14 +1,14 @@
-import { Ponyracer4Page } from './app.po';
+import { PonyracerPage } from './app.po';
 
-describe('ponyracer4 App', () => {
-  let page: Ponyracer4Page;
+describe('ponyracer App', () => {
+  let page: PonyracerPage;
 
   beforeEach(() => {
-    page = new Ponyracer4Page();
+    page = new PonyracerPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to pr!');
+    expect(page.getParagraphText()).toEqual('Ponyracer Always a pleasure to bet on ponies');
   });
 });

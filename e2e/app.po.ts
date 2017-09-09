@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class Ponyracer4Page {
+export class PonyracerPage {
   navigateTo() {
     return browser.get('/');
   }
